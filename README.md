@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![KAIROS Logo](client/public/assets/logo-full.png)
+![KAIROS Logo](client/public/logo.png)
 
 **A sophisticated event planning platform powered by AI**
 
