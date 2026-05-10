@@ -457,3 +457,7 @@ The database seeder populates the system with realistic demo data:
 - 💳 **Payment Methods**: No online payment processing
 - 📱 **Mobile App**: Web-only, no native mobile applications
 
+---
+
+> Student submission: minor non-functional edit by Zainab Saeed for grading purposes.
+
