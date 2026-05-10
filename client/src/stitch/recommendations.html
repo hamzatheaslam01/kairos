@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curated Recommendations | KAIROS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#4e4639",
+                      "surface": "#131313",
+                      "surface-container-low": "#1c1b1b",
+                      "on-primary-container": "#4e3700",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#e9c176",
+                      "outline": "#9a8f80",
+                      "on-tertiary-container": "#3b3b3b",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-primary-fixed": "#261900",
+                      "on-secondary-fixed-variant": "#45474a",
+                      "tertiary-fixed": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "on-secondary": "#2e3034",
+                      "inverse-on-surface": "#313030",
+                      "primary-fixed-dim": "#e9c176",
+                      "on-primary-fixed-variant": "#5d4201",
+                      "on-error-container": "#ffdad6",
+                      "primary": "#e9c176",
+                      "on-primary": "#412d00",
+                      "on-surface": "#e5e2e1",
+                      "tertiary": "#c8c6c5",
+                      "on-background": "#e5e2e1",
+                      "secondary": "#c5c6ca",
+                      "surface-variant": "#353534",
+                      "tertiary-container": "#a7a5a5",
+                      "secondary-fixed-dim": "#c5c6ca",
+                      "on-tertiary": "#313030",
+                      "on-error": "#690005",
+                      "on-secondary-container": "#b7b8bc",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-container": "#c5a059",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-fixed": "#1a1c1f",
+                      "inverse-primary": "#775a19",
+                      "background": "#131313",
+                      "surface-bright": "#3a3939",
+                      "error-container": "#93000a",
+                      "surface-dim": "#131313",
+                      "surface-container-highest": "#353534",
+                      "secondary-container": "#47494d",
+                      "primary-fixed": "#ffdea5",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "secondary-fixed": "#e2e2e6",
+                      "on-surface-variant": "#d1c5b4",
+                      "surface-container": "#201f1f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "32px",
+                      "section-gap": "128px",
+                      "margin": "64px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Manrope"
+                      ],
+                      "headline-xl": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "200"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "300"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(46, 46, 46, 0.5);
+            border-top: 1px solid rgba(233, 193, 118, 0.1);
+        }
+        .atmospheric-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.05) 0%, rgba(5, 5, 5, 0) 70%);
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+      </style>
+</head>
+<body class="bg-[#050505] text-on-surface antialiased min-h-screen relative overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<div class="atmospheric-glow"></div>
+<!-- TopAppBar from JSON -->
+<header class="fixed z-50 bg-black/70 backdrop-blur-xl docked full-width top-0 border-b border-white/10 w-full">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto border-b border-[#2E2E2E]/50">
+<div class="text-xl font-light tracking-[0.3em] text-white">AESTHET</div>
+<nav class="hidden md:flex space-x-12">
+<a class="font-manrope tracking-[0.2em] text-[10px] uppercase font-medium text-white font-semibold hover:text-white transition-opacity duration-300" href="#">Collection</a>
+<a class="font-manrope tracking-[0.2em] text-[10px] uppercase font-medium text-white/60 hover:text-white transition-opacity duration-300" href="#">Atelier</a>
+<a class="font-manrope tracking-[0.2em] text-[10px] uppercase font-medium text-white/60 hover:text-white transition-opacity duration-300" href="#">Archive</a>
+<a class="font-manrope tracking-[0.2em] text-[10px] uppercase font-medium text-white/60 hover:text-white transition-opacity duration-300" href="#">Journal</a>
+</nav>
+<button class="font-manrope tracking-[0.2em] text-[10px] uppercase font-medium text-[#C5A059] border border-[#C5A059] px-6 py-2 rounded-DEFAULT hover:bg-[#C5A059]/10 transition-colors duration-300">
+                Inquire
+            </button>
+</div>
+</header>
+<main class="relative z-10 pt-[160px] pb-section-gap max-w-container-max mx-auto px-gutter">
+<header class="mb-24 text-center">
+<h1 class="font-headline-xl text-headline-xl text-white mb-6">Curated For You</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Selections tailored to your aesthetic sensibilities, embodying minimalism and precision.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-unit">
+<!-- Featured Large Item -->
+<article class="glass-panel rounded-lg md:col-span-8 group overflow-hidden relative min-h-[500px] flex flex-col justify-end p-8">
+<img alt="Architectural minimal interior" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:opacity-80 transition-opacity duration-700" data-alt="Minimalist modern living room with concrete walls, floor to ceiling windows, deep shadows, and subtle warm lighting emphasizing a single designer lounge chair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ERbMIUDZnp6eHsgVOR9p2TcTbtQC3R9X0oqxMpAE_aIPLt2BWhoZGawmKaj8EcKJiyvWNbLck3DoIXkx4LxalOsog756IveSdUvVOxa3bbpJQEGdW_8otU7Hsfw6YtHOLvsg9arqvmGW7PhJuFlYq_MG22giqWEQDkp7S4kwGhk1K3BYQcQm1K8rKvxrVGBRpJHj-5WhZhNCxXYrEfINqNMofVsMdi5far_1MZblVO2f2opy0fSHABLUlbSqJGU3MgH5wu-ggZ77"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm text-primary mb-4 block">ARCHITECTURE</span>
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">The Brutalist Retreat</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-8">A study in concrete and negative space, exploring the intersection of raw materials and refined living environments.</p>
+<a class="inline-flex items-center text-white font-label-sm text-label-sm group/btn" href="#">
+                        EXPLORE WORK 
+                        <span class="material-symbols-outlined ml-2 text-[#C5A059] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Vertical Item -->
+<article class="glass-panel rounded-lg md:col-span-4 group overflow-hidden relative min-h-[500px] flex flex-col justify-end p-8">
+<img alt="Sculptural object" class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:opacity-70 transition-opacity duration-700" data-alt="Close up of a dark matte ceramic vase with a single dried botanical branch, placed on a black marble pedestal with dramatic spotlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARVjzO3CWWLDx-SdaO8ef84Fip3GPZ43SjPRykOnphI_NFSNdQmPz8T_ENZVHx8oUkBdT--2ETxK8lZ5GwkCMCLtG-g02Fj5fotDz4GIck86Zgfqs0FkTnEBZ7vIEoRn2YtdyA1ASyt_uaZ8dpbbiyaSztsMPZTlY9KDKN9cjw9KNKriTRlnj5w6fu5gG8QjwnABiby4zp8dPhGdxLBSn8FXiNYJNNa5TJUbiTaXl8VBqOGg9OrklFckR62IvHrxYPoCmiXIJM1uLL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
+<div class="relative z-10">
+<span class="font-label-sm text-label-sm text-primary mb-4 block">OBJECTS</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Void Collection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Ceramics born from shadow.</p>
+<button class="w-full py-3 border border-outline-variant text-center font-label-sm text-label-sm text-on-surface hover:border-primary hover:text-primary transition-colors">
+                        VIEW DETAILS
+                    </button>
+</div>
+</article>
+<!-- Small Square 1 -->
+<article class="glass-panel rounded-lg md:col-span-4 p-8 group">
+<span class="font-label-sm text-label-sm text-primary mb-6 block">EXHIBITION</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Silence in Form</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">An upcoming curation of minimalist sculpture focusing on tension and balance.</p>
+<div class="w-full h-[1px] bg-outline-variant mb-4 group-hover:bg-primary transition-colors"></div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>OCT 12 — NOV 04</span>
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+</div>
+</article>
+<!-- Small Square 2 -->
+<article class="glass-panel rounded-lg md:col-span-4 p-8 group relative overflow-hidden">
+<img alt="Abstract texture" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply group-hover:scale-105 transition-transform duration-1000" data-alt="Abstract macro shot of layered dark grey slate stone with thin veins of metallic gold reflecting subtle light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-oOsBy9HdsZrC4gpaU5hOZ9e07A3TyuEv-G_TL-Q_TIYG1R3kz2-99m07C077jvfpxZqVUyMGT-ufcH5LgRz1rbZ2W1pmo-z1gXJwnNQdV52VRbegL32tKnlcQRGokVlyFih3HC5sOGjV_J6XrpieBk-ZZ2BM-kLLJZOhYYsKE-REYBVp_kV5XnAEEQ6OLbVF21TSqc2osUHo8G1pXX8LB4VOrgmRvGC0ZLHIXRY8D37UtPT4pfDP7HPop63HjyeFG4X8tqe0u1lh"/>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<span class="font-label-sm text-label-sm text-primary">MATERIALITY</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Tactile Studies</h3>
+<a class="inline-flex items-center text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">
+                            READ JOURNAL <span class="material-symbols-outlined ml-1 text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Small Square 3 -->
+<article class="glass-panel rounded-lg md:col-span-4 p-8 flex flex-col items-center justify-center text-center group hover:border-primary/50 transition-colors">
+<div class="w-16 h-16 rounded-full border border-outline-variant flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">diamond</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Private Viewing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Schedule an exclusive consultation with our curation team.</p>
+<button class="px-6 py-2 border border-primary text-primary font-label-sm text-label-sm hover:bg-primary/10 transition-colors">
+                    REQUEST APPOINTMENT
+                </button>
+</article>
+</div>
+</main>
+<!-- Footer from JSON -->
+<footer class="w-full py-16 border-t border-[#2E2E2E]/30 bg-[#050505] relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-[1440px] mx-auto">
+<div class="text-lg font-light tracking-widest text-white mb-8 md:mb-0">AESTHET</div>
+<div class="flex space-x-8 mb-8 md:mb-0">
+<a class="font-manrope text-[9px] tracking-widest uppercase text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Privacy</a>
+<a class="font-manrope text-[9px] tracking-widest uppercase text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Terms</a>
+<a class="font-manrope text-[9px] tracking-widest uppercase text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Legal</a>
+</div>
+<div class="font-manrope text-[9px] tracking-widest uppercase text-white/40">
+                © 2024 AESTHET. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

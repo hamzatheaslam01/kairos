@@ -1,0 +1,13 @@
+{
+  "name": "kairos",
+  "private": true,
+  "version": "1.0.0",
+  "description": "KAIROS full-stack workspace scripts",
+  "scripts": {
+    "start": "npm --prefix server start",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build"
+  }
+}

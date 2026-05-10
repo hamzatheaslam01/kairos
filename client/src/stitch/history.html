@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking History | KAIROS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c5c6ca",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "background": "#131313",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#47494d",
+                        "on-tertiary": "#313030",
+                        "on-secondary": "#2e3034",
+                        "secondary-fixed": "#e2e2e6",
+                        "outline": "#9a8f80",
+                        "surface-variant": "#353534",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "primary": "#e9c176",
+                        "on-error": "#690005",
+                        "inverse-primary": "#775a19",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "surface-bright": "#3a3939",
+                        "on-secondary-container": "#b7b8bc",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#412d00",
+                        "on-tertiary-container": "#3b3b3b",
+                        "tertiary-container": "#a7a5a5",
+                        "tertiary": "#c8c6c5",
+                        "outline-variant": "#4e4639",
+                        "surface-tint": "#e9c176",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "inverse-on-surface": "#313030",
+                        "on-surface-variant": "#d1c5b4",
+                        "primary-fixed": "#ffdea5",
+                        "on-primary-container": "#4e3700",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#c5a059",
+                        "on-primary-fixed": "#261900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "128px",
+                        "unit": "8px",
+                        "margin": "64px",
+                        "gutter": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "200"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "300"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-sans antialiased selection:bg-primary/30 selection:text-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-[#2E2E2E]/50 bg-[#050505]/70 backdrop-blur-2xl flex justify-between items-center px-12 h-24 max-w-[1440px] mx-auto left-0 right-0">
+<div class="text-2xl font-serif tracking-[0.3em] text-[#C5A059]">KAIROS</div>
+<div class="hidden md:flex gap-12 font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium">
+<a class="text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Collection</a>
+<a class="text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Atelier</a>
+<a class="text-[#C5A059] border-b border-[#C5A059] pb-1" href="#">Archive</a>
+<a class="text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Journal</a>
+</div>
+<button class="font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium text-[#C5A059] hover:opacity-70 transition-all duration-500">Inquire</button>
+</nav>
+<!-- Main Canvas -->
+<main class="w-full max-w-[1440px] mx-auto px-6 md:px-12 pt-48 pb-section-gap flex-grow flex flex-col">
+<!-- Header -->
+<header class="mb-24 md:mb-32 flex flex-col items-center md:items-start text-center md:text-left">
+<h1 class="font-serif text-5xl md:text-6xl text-on-surface tracking-widest font-light uppercase mb-6 opacity-90">Your Legacy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl opacity-70">A curated chronology of your reserved spaces and past engagements. Silence and space, secured.</p>
+</header>
+<!-- Timeline Container -->
+<div class="relative flex flex-col gap-12 md:gap-20">
+<!-- Structural Vertical Timeline (Hidden on mobile) -->
+<div class="absolute left-[24px] top-12 bottom-12 w-[1px] bg-surface-variant/50 hidden md:block z-0"></div>
+<!-- Booking Card 1: UPCOMING -->
+<article class="relative grid grid-cols-1 md:grid-cols-[50px_1fr] gap-6 md:gap-12 items-stretch group">
+<!-- Timeline Node -->
+<div class="hidden md:flex justify-center pt-10 z-10 relative">
+<div class="w-3 h-3 rounded-full bg-primary shadow-[0_0_15px_rgba(233,193,118,0.4)] outline outline-8 outline-background"></div>
+</div>
+<!-- Card Content -->
+<div class="flex flex-col xl:flex-row bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden hover:border-outline-variant transition-colors duration-500 shadow-2xl shadow-black/50">
+<!-- Image -->
+<div class="w-full xl:w-[400px] h-[250px] xl:h-auto relative overflow-hidden bg-surface-container-high">
+<img alt="Luxury brutalist villa interior with floor to ceiling windows, concrete walls, dark minimalist furniture, cinematic moody lighting" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 ease-out grayscale-[20%]" data-alt="Luxury brutalist villa interior with floor to ceiling windows, concrete walls, dark minimalist furniture, cinematic moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR7QbUq6m-DC_Xj-Bm5pTzV8rgXv6911Y2TqYsq-AixGODw827O0miryPgbwHQBUL-LmwbZ5PQm18QOT4WlBdf1biYx-m-CKB-MMPf5rTLVVjPrj501tXdsv7gs1qg88M2JXuApCH4cCvYJjexozlUCkAQLZgosPshx4Lcq07CFa-9cAVldCZEB9BdT8eO4I5X75tgkR3ghgEhedchpAFg_i7jjLdjsiA1aoCBf1W17xDAbxWIOPOFc4QPXDYZyRENUC88PaPgYOjG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+</div>
+<!-- Details -->
+<div class="flex-1 p-8 md:p-12 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-12">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary font-label-sm text-label-sm uppercase tracking-[0.2em]">Upcoming</span>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-on-surface">Oct 24 - 28</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">2024</p>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="font-serif text-3xl md:text-4xl text-on-surface mb-4 tracking-wide">The Obsidian Residence</h2>
+<div class="flex flex-wrap gap-x-8 gap-y-4 font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] opacity-70">location_on</span>
+                                    Kyoto, Japan
+                                </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] opacity-70">group</span>
+                                    2 Guests
+                                </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] opacity-70">vpn_key</span>
+                                    Ref: KR-8829A
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-6 mt-auto border-t border-outline-variant/20 pt-8">
+<button class="px-8 py-3 bg-transparent border border-primary text-primary font-label-sm text-label-sm uppercase tracking-[0.2em] hover:bg-primary/5 transition-colors duration-300">
+                                View Details
+                            </button>
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface uppercase tracking-[0.2em] transition-colors duration-300">
+                                Modify
+                            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Booking Card 2: COMPLETED -->
+<article class="relative grid grid-cols-1 md:grid-cols-[50px_1fr] gap-6 md:gap-12 items-stretch group">
+<div class="hidden md:flex justify-center pt-10 z-10 relative">
+<div class="w-2 h-2 rounded-full bg-surface-variant outline outline-8 outline-background"></div>
+</div>
+<div class="flex flex-col xl:flex-row bg-surface-container-low border border-outline-variant/10 rounded-xl overflow-hidden hover:border-outline-variant/30 transition-colors duration-500 shadow-2xl shadow-black/50 opacity-80 hover:opacity-100">
+<div class="w-full xl:w-[400px] h-[250px] xl:h-auto relative overflow-hidden bg-surface-container-high">
+<img alt="Minimalist desert hideaway, sleek architecture blending into rocky landscape, twilight sky, warm interior glow" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000 ease-out grayscale-[40%]" data-alt="Minimalist desert hideaway, sleek architecture blending into rocky landscape, twilight sky, warm interior glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnJsIq8KaWC_i54NE8LRJg1-dK_rhE6jxVSaInVbVNQ_bNf6Lg8UDDHVQTZuyWrDNWbXy2a3yz8Q--rAYczguZLnvYfJwKtE2Ur2pGt9hNmCi7zCcCLEi0gI6wjINHJf-uKQ-P3ZPT_j7HG8C6QrDMPgPRV1b5NeI_DVz_leIXd32jMf5DUkIxfql6CUBI2C2fBnTFRtfrCt0cQC2IdbX3leKi0lNIcItldMRQ732Ip-jrFglY2-VrNweuYs9QQr_RC1x67iLmlPTZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+</div>
+<div class="flex-1 p-8 md:p-12 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-12">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-variant/30 border border-outline-variant/30 text-secondary font-label-sm text-label-sm uppercase tracking-[0.2em]">Completed</span>
+<div class="text-right opacity-70">
+<p class="font-headline-md text-headline-md text-on-surface">Aug 12 - 15</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2 uppercase tracking-widest">2024</p>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="font-serif text-3xl md:text-4xl text-on-surface mb-4 tracking-wide opacity-90">Amanera Pavilion</h2>
+<div class="flex flex-wrap gap-x-8 gap-y-4 font-body-md text-body-md text-on-surface-variant opacity-80">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] opacity-70">location_on</span>
+                                    Dominican Republic
+                                </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] opacity-70">vpn_key</span>
+                                    Ref: KR-7104B
+                                </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-6 mt-auto border-t border-outline-variant/10 pt-8">
+<button class="px-8 py-3 bg-surface border border-outline text-on-surface font-label-sm text-label-sm uppercase tracking-[0.2em] hover:border-primary hover:text-primary transition-colors duration-300">
+                                Review Stay
+                            </button>
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface uppercase tracking-[0.2em] transition-colors duration-300">
+                                Rebook
+                            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Booking Card 3: CANCELLED -->
+<article class="relative grid grid-cols-1 md:grid-cols-[50px_1fr] gap-6 md:gap-12 items-stretch group">
+<div class="hidden md:flex justify-center pt-10 z-10 relative">
+<div class="w-2 h-2 rounded-full bg-[#353534] outline outline-8 outline-background"></div>
+</div>
+<div class="flex flex-col xl:flex-row bg-surface-container-lowest border border-outline-variant/5 rounded-xl overflow-hidden opacity-50 grayscale transition-opacity duration-500 hover:opacity-70">
+<div class="w-full xl:w-[400px] h-[250px] xl:h-auto relative overflow-hidden bg-surface-container-high">
+<img alt="Dark luxury apartment interior in monochrome, minimal art, shadows" class="absolute inset-0 w-full h-full object-cover opacity-30" data-alt="Dark luxury apartment interior in monochrome, minimal art, shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqiEpT9DsEG6tauvhaqOJHWzgUslifkf7n_VgNpco5rVMlbtEYTofQwBkAgX2eqr6wGEDmm9aj4Ym1EbMI5rJvw3auW6uwlxnajg7ZFhR4uUqeycBA54W078wE_0nWTZ5Qf-pgwtBhhFpXIfAtBCUy8fyQc_0IKlqMY1YaaLlYwN0tP23MD_m7niONdOBTs-1LqKFyWLSgTkheCPAkyIaqnmwHgK72y0wx9Lg7_LGF1KE682ij41nHqBheAljKkw8UhdV8CImFjsqW"/>
+</div>
+<div class="flex-1 p-8 md:p-12 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-12">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-error-container/10 border border-error/20 text-error/70 font-label-sm text-label-sm uppercase tracking-[0.2em]">Cancelled</span>
+<div class="text-right">
+<p class="font-headline-md text-headline-md text-on-surface line-through decoration-1 opacity-50">Mar 05 - 08</p>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="font-serif text-3xl md:text-4xl text-on-surface mb-4 tracking-wide">The Glass House</h2>
+<div class="flex flex-wrap gap-x-8 gap-y-4 font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                                    Copenhagen, Denmark
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#2E2E2E]/50 bg-[#050505] flex flex-col items-center gap-16 py-32 px-12 max-w-[1440px] mx-auto mt-auto">
+<div class="font-serif italic text-lg text-[#C5A059]">KAIROS</div>
+<div class="flex gap-8 font-['Manrope'] tracking-[0.15em] text-[10px] text-[#555555]">
+<a class="text-[#555555] hover:text-[#C5A059] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-[#555555] hover:text-[#C5A059] transition-colors duration-300" href="#">Terms</a>
+<a class="text-[#555555] hover:text-[#C5A059] transition-colors duration-300" href="#">Contact</a>
+<a class="text-[#555555] hover:text-[#C5A059] transition-colors duration-300" href="#">Press</a>
+</div>
+<div class="font-['Manrope'] tracking-[0.15em] text-[10px] text-[#555555] opacity-50">© 2024 KAIROS. ALL RIGHTS RESERVED.</div>
+</footer>
+</body></html>

@@ -1,0 +1,288 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(17, 19, 26, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-h);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.page-wrap {
+  width: min(1120px, 94vw);
+  margin: 0 auto;
+  padding: 32px 0 54px;
+}
+
+.centered {
+  min-height: calc(100vh - 100px);
+  display: grid;
+  place-items: center;
+}
+
+.landing {
+  display: grid;
+  gap: 26px;
+}
+
+.hero-panel {
+  border: 1px solid var(--border);
+  padding: clamp(20px, 5vw, 48px);
+  background:
+    linear-gradient(120deg, rgba(255, 59, 59, 0.14), transparent 45%),
+    radial-gradient(circle at top right, rgba(255, 59, 59, 0.11), transparent 35%),
+    linear-gradient(180deg, #161a23, #11131a);
+}
+
+.hero-panel h1 {
+  max-width: 12ch;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 10px;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.cta-row {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.features,
+.grid-3 {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.panel,
+.stat,
+.auth-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #191d28, #131720);
+  padding: 18px;
+}
+
+.auth-layout {
+  min-height: calc(100vh - 120px);
+  display: grid;
+  place-items: center;
+}
+
+.auth-card {
+  width: min(460px, 94vw);
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 8px;
+  color: var(--text-h);
+}
+
+input,
+select {
+  border: 1px solid var(--border);
+  background: #0f131c;
+  color: var(--text-h);
+  padding: 10px 12px;
+  font: inherit;
+}
+
+textarea {
+  border: 1px solid var(--border);
+  background: #0f131c;
+  color: var(--text-h);
+  padding: 10px 12px;
+  font: inherit;
+  resize: vertical;
+}
+
+.primary-btn,
+.secondary-btn,
+.ghost-btn,
+.danger-btn,
+.text-btn {
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font: inherit;
+  padding: 10px 14px;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--text-h);
+  border-color: var(--border);
+}
+
+.ghost-btn,
+.text-btn {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.danger-btn {
+  background: transparent;
+  color: #ff7777;
+  border-color: #763232;
+}
+
+.full {
+  width: 100%;
+}
+
+.two-col {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.list-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  background: #0f131c;
+  padding: 12px;
+}
+
+.list-item h4,
+.card h3,
+.panel h2,
+.stat h3 {
+  margin: 0 0 6px;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.stat h3 {
+  font-size: 28px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  background: #10141d;
+}
+
+.muted {
+  color: var(--text);
+}
+
+.ai-plan {
+  border: 1px solid var(--border);
+  background: #0f131c;
+  padding: 12px;
+}
+
+.ai-plan h3,
+.ai-plan h4 {
+  margin: 0 0 8px;
+}
+
+.ai-plan ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.mini-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin: 10px 0;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

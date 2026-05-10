@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAIROS - Finalize Your Reservation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4e4639",
+                        "surface": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#4e3700",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c176",
+                        "outline": "#9a8f80",
+                        "on-tertiary-container": "#3b3b3b",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#261900",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#2e3034",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#e9c176",
+                        "on-primary": "#412d00",
+                        "on-surface": "#e5e2e1",
+                        "tertiary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "secondary": "#c5c6ca",
+                        "surface-variant": "#353534",
+                        "tertiary-container": "#a7a5a5",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "on-tertiary": "#313030",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#b7b8bc",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#c5a059",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "inverse-primary": "#775a19",
+                        "background": "#131313",
+                        "surface-bright": "#3a3939",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "secondary-container": "#47494d",
+                        "primary-fixed": "#ffdea5",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#e2e2e6",
+                        "on-surface-variant": "#d1c5b4",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "section-gap": "128px",
+                        "margin": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "200" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed w-full z-50 bg-black/70 backdrop-blur-xl docked full-width top-0 border-b border-white/10 flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto left-0 right-0">
+<div class="flex items-center gap-12">
+<a class="text-xl font-light tracking-[0.3em] text-white" href="#">AESTHET</a>
+<div class="hidden md:flex items-center gap-8 font-manrope tracking-[0.2em] text-[10px] uppercase font-medium">
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Collection</a>
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Atelier</a>
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Archive</a>
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-manrope tracking-[0.2em] text-[10px] uppercase font-medium text-[#C5A059] border border-[#C5A059] px-6 py-2 hover:bg-[#C5A059]/10 transition-colors duration-300">Inquire</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-section-gap px-gutter max-w-container-max mx-auto w-full">
+<div class="mb-margin">
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-unit">Finalize Your Reservation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Select your preferred dates to experience the quiet luxury of KAIROS.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Calendar Section -->
+<div class="lg:col-span-7">
+<div class="border-t border-outline-variant/50 pt-8">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline-md text-headline-md text-on-background">October 2024</h2>
+<div class="flex gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-y-6 text-center font-label-sm text-label-sm text-on-surface-variant mb-6">
+<div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
+</div>
+<div class="grid grid-cols-7 gap-y-4 text-center font-body-md text-body-md text-on-background">
+<div class="text-on-surface-variant/30 py-2">29</div>
+<div class="text-on-surface-variant/30 py-2">30</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">1</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">2</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">3</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">4</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">5</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">6</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">7</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">8</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">9</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">10</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">11</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">12</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">13</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">14</div>
+<div class="py-2 relative cursor-pointer">
+<div class="absolute inset-0 bg-primary/10 border border-primary/30 shadow-[0_0_15px_rgba(233,193,118,0.15)] z-0 pointer-events-none"></div>
+<span class="relative z-10 text-primary">15</span>
+</div>
+<div class="py-2 relative cursor-pointer">
+<div class="absolute inset-0 bg-primary/5 border-t border-b border-primary/20 z-0 pointer-events-none"></div>
+<span class="relative z-10 text-primary">16</span>
+</div>
+<div class="py-2 relative cursor-pointer">
+<div class="absolute inset-0 bg-primary/5 border-t border-b border-primary/20 z-0 pointer-events-none"></div>
+<span class="relative z-10 text-primary">17</span>
+</div>
+<div class="py-2 relative cursor-pointer">
+<div class="absolute inset-0 bg-primary/10 border border-primary/30 shadow-[0_0_15px_rgba(233,193,118,0.15)] z-0 pointer-events-none"></div>
+<span class="relative z-10 text-primary">18</span>
+</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">19</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">20</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">21</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">22</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">23</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">24</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">25</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">26</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">27</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">28</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">29</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">30</div>
+<div class="py-2 cursor-pointer hover:text-primary transition-colors">31</div>
+<div class="text-on-surface-variant/30 py-2">1</div>
+<div class="text-on-surface-variant/30 py-2">2</div>
+</div>
+</div>
+<div class="mt-12 flex items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(233,193,118,0.5)]"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Selected Dates</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available</span>
+</div>
+</div>
+</div>
+<!-- Booking Summary -->
+<div class="lg:col-span-4 lg:col-start-9">
+<div class="sticky top-32">
+<h3 class="font-headline-md text-headline-md text-on-background mb-8 border-b border-outline-variant/50 pb-4">Reservation Details</h3>
+<div class="space-y-6 mb-12">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">DATES</p>
+<p class="font-body-md text-body-md text-on-background">Oct 15 — Oct 18, 2024</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">GUESTS</p>
+<p class="font-body-md text-body-md text-on-background">2 Adults</p>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">ACCOMMODATION</p>
+<p class="font-body-md text-body-md text-on-background">The Obsidian Suite</p>
+</div>
+</div>
+<div class="border-t border-outline-variant/50 pt-6 space-y-4 mb-8">
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span>$1,200 x 3 Nights</span>
+<span>$3,600</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Taxes &amp; Fees</span>
+<span>$432</span>
+</div>
+<div class="flex justify-between font-headline-md text-headline-md text-primary pt-4 border-t border-outline-variant/30">
+<span>Total</span>
+<span>$4,032</span>
+</div>
+</div>
+<button class="w-full font-label-sm text-label-sm text-primary border border-primary px-8 py-4 hover:bg-primary/10 transition-colors duration-300 text-center uppercase tracking-widest">
+                        Proceed to Checkout
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#050505] full-width py-16 border-t border-[#2E2E2E]/30 flex flex-col md:flex-row justify-between items-center px-12 max-w-[1440px] mx-auto w-full">
+<div class="text-lg font-light tracking-widest text-white mb-8 md:mb-0">AESTHET</div>
+<div class="flex gap-8 font-manrope text-[9px] tracking-widest uppercase mb-8 md:mb-0">
+<a class="text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Terms</a>
+<a class="text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Legal</a>
+</div>
+<div class="font-manrope text-[9px] tracking-widest uppercase text-[#C5A059]">
+            © 2024 AESTHET. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

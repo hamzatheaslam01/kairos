@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAIROS - Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c5c6ca",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "background": "#131313",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#47494d",
+                        "on-tertiary": "#313030",
+                        "on-secondary": "#2e3034",
+                        "secondary-fixed": "#e2e2e6",
+                        "outline": "#9a8f80",
+                        "surface-variant": "#353534",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "primary": "#e9c176",
+                        "on-error": "#690005",
+                        "inverse-primary": "#775a19",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "surface-bright": "#3a3939",
+                        "on-secondary-container": "#b7b8bc",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#412d00",
+                        "on-tertiary-container": "#3b3b3b",
+                        "tertiary-container": "#a7a5a5",
+                        "tertiary": "#c8c6c5",
+                        "outline-variant": "#4e4639",
+                        "surface-tint": "#e9c176",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "inverse-on-surface": "#313030",
+                        "on-surface-variant": "#d1c5b4",
+                        "primary-fixed": "#ffdea5",
+                        "on-primary-container": "#4e3700",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#c5a059",
+                        "on-primary-fixed": "#261900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "128px",
+                        "unit": "8px",
+                        "margin": "64px",
+                        "gutter": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "200" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "300" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-hidden antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar JSON Component -->
+<header class="fixed top-0 w-full z-50 border-b border-[#2E2E2E]/50 bg-[#050505]/70 backdrop-blur-2xl">
+<div class="flex justify-between items-center px-12 h-24 max-w-[1440px] mx-auto">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Collection</a>
+<a class="font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Atelier</a>
+<a class="font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Archive</a>
+<a class="font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium text-[#A0A0A0] hover:text-[#C5A059] transition-colors duration-300" href="#">Journal</a>
+</nav>
+<a class="text-2xl font-serif tracking-[0.3em] text-[#C5A059] absolute left-1/2 -translate-x-1/2" href="#">KAIROS</a>
+<div class="flex items-center gap-6 ml-auto">
+<button class="font-['Manrope'] uppercase tracking-[0.2em] text-[10px] font-medium text-[#C5A059] hover:opacity-70 transition-all duration-500">Inquire</button>
+</div>
+</div>
+</header>
+<!-- Blurred Cinematic Background -->
+<div class="absolute inset-0 w-full h-full z-0">
+<img alt="Cinematic dark architectural interior with soft directional light, muted concrete textures and deep shadows, heavily blurred." class="w-full h-full object-cover blur-xl brightness-[0.25] scale-105" data-alt="Cinematic dark architectural interior with soft directional light, muted concrete textures and deep shadows, heavily blurred." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6xkHljVvcEp263UCA5whp_7SZVOt0lBP9KH1YYWjGK5s71nvexC8gdsJzVP8RPrPsXrpZbVPzVTHDRd5McB4Z890Uo7O-65_nbU1f-2E8KVwbttGn9GbiL1mKAYfd0Dk-QU0Va1nv5M2pytIrbNkSublK8_0GrO0eSrWlRHeNhcUEOVKQK_zGCwcIbPTq0oQxO3Uui_ktzyCWjgx16PF0ltQn4YBYtDJVpEnyfZsUxf_Fg4Q48ba6DiXjE5onUAh14YsP8NZgYJia"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<!-- AI Chat Widget Overlay -->
+<div class="fixed bottom-12 right-12 z-[60] w-[420px] h-[600px] flex flex-col bg-surface/40 backdrop-blur-3xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl shadow-black/80">
+<!-- Widget Header -->
+<div class="flex justify-between items-center px-6 py-5 border-b border-outline-variant/20 bg-surface-container-lowest/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">Concierge</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Chat Canvas -->
+<div class="flex-1 overflow-y-auto p-6 flex flex-col gap-8 scrollbar-hide">
+<!-- AI Message -->
+<div class="flex flex-col gap-2 max-w-[85%] self-start">
+<div class="font-serif text-[16px] leading-[1.7] tracking-wide text-on-surface opacity-90">
+                    Welcome to KAIROS. How may I assist you in your journey today?
+                </div>
+</div>
+<!-- User Message -->
+<div class="flex flex-col gap-2 max-w-[85%] self-end">
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-lg p-4 backdrop-blur-sm">
+<p class="font-body-md text-body-md text-on-surface opacity-80">
+                        I am looking for a piece from the Archive. Something minimalist.
+                    </p>
+</div>
+</div>
+<!-- AI Message -->
+<div class="flex flex-col gap-2 max-w-[85%] self-start">
+<div class="font-serif text-[16px] leading-[1.7] tracking-wide text-on-surface opacity-90">
+                    Certainly. The Archive holds our most timeless and austere creations. Are you seeking a specific material, or perhaps a particular era of our design history?
+                </div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 pt-4 bg-gradient-to-t from-surface-container-lowest/80 to-transparent">
+<div class="flex items-end gap-3 border-b border-outline-variant focus-within:border-primary transition-colors duration-500 pb-2">
+<input class="w-full bg-transparent border-none outline-none focus:ring-0 px-0 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/40 placeholder:uppercase placeholder:tracking-[0.1em] placeholder:text-[10px]" placeholder="Inquire..." type="text"/>
+<button class="text-primary hover:text-primary-fixed transition-colors pb-1">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

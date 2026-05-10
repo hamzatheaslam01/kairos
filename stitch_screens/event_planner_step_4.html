@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAIROS - Event Strategy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-secondary-fixed": "#261900",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#314672",
+                        "on-primary": "#412d00",
+                        "outline-variant": "#4e4639",
+                        "tertiary-container": "#b1c6fa",
+                        "on-tertiary": "#192f5a",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#3d527f",
+                        "surface-container-highest": "#353534",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "primary": "#ffdea5",
+                        "primary-fixed": "#ffdea5",
+                        "on-secondary-container": "#dab36a",
+                        "surface-dim": "#131313",
+                        "error": "#ffb4ab",
+                        "primary-container": "#e9c176",
+                        "surface": "#131313",
+                        "on-secondary": "#412d00",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-tint": "#e9c176",
+                        "surface-container": "#201f1f",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#ffdea5",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#001a43",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-fixed-dim": "#b1c6fa",
+                        "on-surface-variant": "#d1c5b4",
+                        "on-primary-fixed": "#261900",
+                        "outline": "#9a8f80",
+                        "secondary": "#e9c176",
+                        "secondary-container": "#604403",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "inverse-primary": "#775a19",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#6a4e0c",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-bright": "#393939",
+                        "tertiary": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "container-max": "1280px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Manrope"],
+                        "hero-display-mobile": ["Manrope"],
+                        "eyebrow": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "hero-display": ["Manrope"],
+                        "body": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "300"}],
+                        "hero-display-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "0.1em", "fontWeight": "200"}],
+                        "eyebrow": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "hero-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "200"}],
+                        "body": ["16px", {"lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col antialiased selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-outline/30 flat no shadows">
+<div class="flex justify-between items-center px-xl py-md w-full max-w-container-max mx-auto">
+<div class="font-h1 text-h1 font-light tracking-[0.2em] text-on-surface">KAIROS</div>
+<div class="hidden md:flex items-center space-x-lg">
+<!-- Navigation suppressed based on rules -->
+</div>
+<button class="font-h2 text-h2 uppercase tracking-[0.15em] text-primary hover:text-primary transition-colors duration-300 opacity-100 hover:opacity-80 transition-opacity flex items-center gap-sm">
+                Begin Planning <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar (Suppressed based on linear/transactional intent) -->
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-xl px-gutter md:px-xl">
+<div class="max-w-[900px] mx-auto w-full">
+<!-- Stepper -->
+<div class="flex items-center justify-between mb-xl relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-px bg-outline/20 -z-10"></div>
+<div class="flex flex-col items-center gap-xs bg-background px-md">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center border border-outline/30 text-on-surface-variant font-eyebrow text-eyebrow">1</div>
+<span class="font-eyebrow text-eyebrow text-on-surface-variant">VISION</span>
+</div>
+<div class="flex flex-col items-center gap-xs bg-background px-md">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center border border-outline/30 text-on-surface-variant font-eyebrow text-eyebrow">2</div>
+<span class="font-eyebrow text-eyebrow text-on-surface-variant">GUESTS</span>
+</div>
+<div class="flex flex-col items-center gap-xs bg-background px-md">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center border border-outline/30 text-on-surface-variant font-eyebrow text-eyebrow">3</div>
+<span class="font-eyebrow text-eyebrow text-on-surface-variant">DETAILS</span>
+</div>
+<div class="flex flex-col items-center gap-xs bg-background px-md">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-eyebrow text-eyebrow shadow-[0_0_15px_rgba(233,193,118,0.3)]">4</div>
+<span class="font-eyebrow text-eyebrow text-primary">YOUR PLAN</span>
+</div>
+</div>
+<!-- Header -->
+<header class="mb-xl text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-md">
+<div>
+<span class="inline-flex items-center gap-xs px-sm py-xs border border-primary/30 text-primary font-eyebrow text-eyebrow uppercase tracking-widest rounded-sm mb-md bg-primary/5">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+                        AI-GENERATED
+                    </span>
+<h1 class="font-hero-display-mobile md:font-hero-display text-hero-display-mobile md:text-hero-display text-on-surface uppercase">YOUR EVENT STRATEGY</h1>
+</div>
+<button class="flex items-center justify-center gap-xs text-on-surface-variant font-eyebrow text-eyebrow uppercase tracking-widest hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined">download</span>
+                    Export PDF
+                </button>
+</header>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg mb-xl">
+<!-- Left Column: Budget -->
+<div class="md:col-span-5 flex flex-col gap-md">
+<div class="bg-surface-container-low/70 backdrop-blur-xl border border-outline/30 rounded p-lg relative overflow-hidden h-full">
+<div class="absolute top-0 right-0 p-md opacity-10">
+<span class="material-symbols-outlined text-6xl">account_balance_wallet</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface mb-lg">Budget Allocation</h2>
+<div class="space-y-lg">
+<div>
+<div class="flex justify-between font-eyebrow text-eyebrow text-on-surface-variant mb-xs">
+<span class="uppercase tracking-widest">Venue &amp; Architecture</span>
+<span>40%</span>
+</div>
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 40%"></div>
+</div>
+<div class="mt-xs font-body-sm text-body-sm text-on-surface-variant text-right">PKR 2,000,000</div>
+</div>
+<div>
+<div class="flex justify-between font-eyebrow text-eyebrow text-on-surface-variant mb-xs">
+<span class="uppercase tracking-widest">Gastronomy &amp; Catering</span>
+<span>35%</span>
+</div>
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary/70" style="width: 35%"></div>
+</div>
+<div class="mt-xs font-body-sm text-body-sm text-on-surface-variant text-right">PKR 1,750,000</div>
+</div>
+<div>
+<div class="flex justify-between font-eyebrow text-eyebrow text-on-surface-variant mb-xs">
+<span class="uppercase tracking-widest">Atmosphere &amp; Decor</span>
+<span>25%</span>
+</div>
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary/40" style="width: 25%"></div>
+</div>
+<div class="mt-xs font-body-sm text-body-sm text-on-surface-variant text-right">PKR 1,250,000</div>
+</div>
+</div>
+<div class="mt-lg pt-md border-t border-outline/20">
+<div class="flex justify-between items-end">
+<span class="font-eyebrow text-eyebrow text-on-surface-variant uppercase tracking-widest">Estimated Total</span>
+<span class="font-h2 text-h2 text-primary">PKR 5,000,000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline -->
+<div class="md:col-span-7 flex flex-col gap-md">
+<div class="bg-surface-container-low/70 backdrop-blur-xl border border-outline/30 rounded p-lg relative h-full">
+<h2 class="font-h2 text-h2 text-on-surface mb-lg">Execution Timeline</h2>
+<div class="relative border-l border-outline/30 ml-[11px] space-y-xl pb-md">
+<!-- Timeline Item 1 -->
+<div class="relative pl-lg">
+<div class="absolute w-[23px] h-[23px] bg-background border border-primary rounded-full left-[-12px] top-0 flex items-center justify-center">
+<div class="w-[9px] h-[9px] bg-primary rounded-full"></div>
+</div>
+<div class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest mb-xs">Phase 1: Foundation</div>
+<h3 class="font-body text-body text-on-surface mb-xs">Venue Selection &amp; Securing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Finalize the heritage site location and secure necessary permits for structural modifications and lighting installations.</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-lg">
+<div class="absolute w-[23px] h-[23px] bg-background border border-outline rounded-full left-[-12px] top-0 flex items-center justify-center"></div>
+<div class="font-eyebrow text-eyebrow text-on-surface-variant uppercase tracking-widest mb-xs">Phase 2: Aesthetics</div>
+<h3 class="font-body text-body text-on-surface mb-xs">Vendor Curation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Engage master florists and specialized lighting technicians to execute the minimalist glassmorphism aesthetic.</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-lg">
+<div class="absolute w-[23px] h-[23px] bg-background border border-outline rounded-full left-[-12px] top-0 flex items-center justify-center"></div>
+<div class="font-eyebrow text-eyebrow text-on-surface-variant uppercase tracking-widest mb-xs">Phase 3: Logistics</div>
+<h3 class="font-body text-body text-on-surface mb-xs">Guest Experience Design</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Finalize catering menus with executive chefs and orchestrate the arrival protocol for high-profile attendees.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col md:flex-row justify-between items-center mt-xl border-t border-outline/20 pt-lg gap-md">
+<button class="w-full md:w-auto px-lg py-sm border border-outline text-on-surface font-eyebrow text-eyebrow uppercase tracking-widest rounded-sm hover:bg-surface-variant transition-colors duration-300">
+                    Start Over
+                </button>
+<button class="w-full md:w-auto px-lg py-sm bg-primary text-on-primary font-eyebrow text-eyebrow uppercase tracking-widest rounded-sm hover:bg-primary/90 transition-colors duration-300 flex items-center justify-center gap-sm">
+                    Find My Vendors <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl border-t border-outline/10 bg-background flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center px-xl max-w-container-max mx-auto">
+<span class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant">© KAIROS 2024</span>
+<div class="hidden text-on-surface font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors opacity-100 flex flex-col md:flex-row justify-between items-center px-xl max-w-container-max mx-auto"></div>
+<div class="flex space-x-md mt-md md:mt-0">
+<a class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a>
+<a class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

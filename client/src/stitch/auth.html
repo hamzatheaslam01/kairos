@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAIROS | Access the Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c5c6ca",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "background": "#131313",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-container": "#47494d",
+                        "on-tertiary": "#313030",
+                        "on-secondary": "#2e3034",
+                        "secondary-fixed": "#e2e2e6",
+                        "outline": "#9a8f80",
+                        "surface-variant": "#353534",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "primary": "#e9c176",
+                        "on-error": "#690005",
+                        "inverse-primary": "#775a19",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "surface-bright": "#3a3939",
+                        "on-secondary-container": "#b7b8bc",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#412d00",
+                        "on-tertiary-container": "#3b3b3b",
+                        "tertiary-container": "#a7a5a5",
+                        "tertiary": "#c8c6c5",
+                        "outline-variant": "#4e4639",
+                        "surface-tint": "#e9c176",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "inverse-on-surface": "#313030",
+                        "on-surface-variant": "#d1c5b4",
+                        "primary-fixed": "#ffdea5",
+                        "on-primary-container": "#4e3700",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#c5a059",
+                        "on-primary-fixed": "#261900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "128px",
+                        "unit": "8px",
+                        "margin": "64px",
+                        "gutter": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "headline-xl": ["Manrope", "sans-serif"],
+                        "headline-lg": ["Manrope", "sans-serif"],
+                        "label-sm": ["Manrope", "sans-serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "headline-md": ["Manrope", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "200"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "300"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom input autofill override for dark theme */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px theme('colors.surface-container-highest') inset !important;
+            -webkit-text-fill-color: theme('colors.on-surface') !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex items-center justify-center relative overflow-hidden font-body-md antialiased selection:bg-primary/30 selection:text-primary-fixed">
+<!-- Cinematic Atmospheric Background -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&amp;w=2564&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-[0.15] mix-blend-luminosity grayscale" data-alt="Abstract cinematic dark macro photography of textured stone or fabric, deep shadows, subtle dramatic edge lighting, pure noir aesthetic."></div>
+<div class="absolute inset-0 bg-gradient-to-tr from-background via-background/80 to-background/40"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,theme(colors.surface-variant/10),transparent_70%)]"></div>
+</div>
+<!-- Main Glassmorphic Canvas -->
+<main class="relative z-10 w-full max-w-[440px] px-gutter py-margin mx-4 bg-surface-container-high/30 backdrop-blur-2xl border border-outline-variant/30 rounded-lg shadow-2xl flex flex-col gap-margin before:absolute before:inset-0 before:border-t before:border-outline/10 before:rounded-lg before:pointer-events-none">
+<!-- Header Section -->
+<header class="flex flex-col items-center gap-unit text-center">
+<h1 class="font-serif text-headline-md font-headline-md text-primary tracking-[0.3em] uppercase opacity-90">KAIROS</h1>
+<h2 class="font-serif text-headline-lg font-headline-lg text-on-surface mt-4">Access the Atelier</h2>
+<p class="font-body-md text-body-md text-secondary max-w-[80%] mx-auto mt-2">Enter your credentials to continue your journey.</p>
+</header>
+<!-- Toggle Tabs -->
+<div class="flex w-full border-b border-surface-variant relative">
+<button class="flex-1 pb-4 border-b border-primary text-primary font-label-sm text-label-sm uppercase tracking-widest text-center transition-colors">
+                Login
+            </button>
+<button class="flex-1 pb-4 border-b border-transparent text-secondary font-label-sm text-label-sm uppercase tracking-widest text-center opacity-40 hover:opacity-100 hover:text-on-surface transition-all duration-300">
+                Register
+            </button>
+</div>
+<!-- Login Form -->
+<form class="flex flex-col gap-8 w-full">
+<!-- Email Field -->
+<div class="relative group">
+<input class="peer w-full bg-transparent border-b border-outline-variant py-2 text-on-surface font-body-md text-body-md focus:outline-none focus:border-primary focus:shadow-[0_1px_0_0_theme(colors.primary)] transition-all duration-300 placeholder-transparent" id="email" name="email" placeholder=" " required="" type="email"/>
+<label class="absolute left-0 top-2 text-secondary font-body-md text-body-md cursor-text transition-all duration-300 peer-focus:-translate-y-6 peer-focus:text-label-sm peer-focus:font-label-sm peer-focus:text-primary peer-focus:uppercase peer-focus:tracking-widest peer-[&amp;:not(:placeholder-shown)]:-translate-y-6 peer-[&amp;:not(:placeholder-shown)]:text-label-sm peer-[&amp;:not(:placeholder-shown)]:font-label-sm peer-[&amp;:not(:placeholder-shown)]:text-tertiary peer-[&amp;:not(:placeholder-shown)]:uppercase peer-[&amp;:not(:placeholder-shown)]:tracking-widest" for="email">
+                    Email Address
+                </label>
+</div>
+<!-- Password Field -->
+<div class="relative group">
+<input class="peer w-full bg-transparent border-b border-outline-variant py-2 text-on-surface font-body-md text-body-md focus:outline-none focus:border-primary focus:shadow-[0_1px_0_0_theme(colors.primary)] transition-all duration-300 placeholder-transparent" id="password" name="password" placeholder=" " required="" type="password"/>
+<label class="absolute left-0 top-2 text-secondary font-body-md text-body-md cursor-text transition-all duration-300 peer-focus:-translate-y-6 peer-focus:text-label-sm peer-focus:font-label-sm peer-focus:text-primary peer-focus:uppercase peer-focus:tracking-widest peer-[&amp;:not(:placeholder-shown)]:-translate-y-6 peer-[&amp;:not(:placeholder-shown)]:text-label-sm peer-[&amp;:not(:placeholder-shown)]:font-label-sm peer-[&amp;:not(:placeholder-shown)]:text-tertiary peer-[&amp;:not(:placeholder-shown)]:uppercase peer-[&amp;:not(:placeholder-shown)]:tracking-widest" for="password">
+                    Password
+                </label>
+<button aria-label="Toggle password visibility" class="absolute right-0 top-2 text-secondary hover:text-primary transition-colors focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility_off</span>
+</button>
+</div>
+<!-- Meta Actions -->
+<div class="flex justify-between items-center mt-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<input class="peer appearance-none w-4 h-4 border border-outline-variant bg-transparent checked:border-primary checked:bg-primary/10 transition-colors focus:ring-0 focus:outline-none cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined text-primary absolute text-[12px] opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none" data-weight="fill">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest group-hover:text-on-surface transition-colors mt-0.5">Remember Me</span>
+</label>
+<a class="font-label-sm text-label-sm text-secondary uppercase tracking-widest hover:text-primary transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-primary hover:after:w-full after:transition-all after:duration-300" href="#">
+                    Forgot Password?
+                </a>
+</div>
+<!-- Primary CTA -->
+<button class="w-full mt-4 py-5 px-8 border border-primary text-primary font-label-sm text-label-sm uppercase tracking-[0.2em] relative overflow-hidden group focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all duration-500" type="submit">
+<span class="relative z-10 transition-colors duration-300 group-hover:text-background">Enter</span>
+<div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] z-0"></div>
+<div class="absolute inset-0 shadow-[inset_0_0_20px_rgba(233,193,118,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+</button>
+</form>
+</main>
+</body></html>

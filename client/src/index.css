@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface/70 backdrop-blur-[20px] border border-outline/30;
+}
+
+.data-point { background-color: #1800ad; }
+.data-bar { background-color: #1a1b3a; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020412;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1b3a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1800ad;
+}
+
+
+/* Base form inputs */
+input, select, textarea {
+  @apply bg-transparent text-on-surface w-full p-0 font-body-md;
+  border: none;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Elegant Reveal Utilities */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Global Transitions */
+a, button, input, select, textarea {
+  @apply transition-all duration-300;
+}
+
+/* Glass panel refinement */
+.glass-panel {
+  @apply bg-surface/70 backdrop-blur-[20px] border border-outline/30 hover:bg-surface/80 transition-all duration-500;
+}
+
+/* Shimmer effect for loading states or premium accents */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 222, 165, 0.05), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Utilities for hiding scrollbar but retaining functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

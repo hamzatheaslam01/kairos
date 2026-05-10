@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAIROS - Create Your Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4e4639",
+                        "surface": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#4e3700",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c176",
+                        "outline": "#9a8f80",
+                        "on-tertiary-container": "#3b3b3b",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#261900",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#2e3034",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#e9c176",
+                        "on-primary": "#412d00",
+                        "on-surface": "#e5e2e1",
+                        "tertiary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "secondary": "#c5c6ca",
+                        "surface-variant": "#353534",
+                        "tertiary-container": "#a7a5a5",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "on-tertiary": "#313030",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#b7b8bc",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#c5a059",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "inverse-primary": "#775a19",
+                        "background": "#131313",
+                        "surface-bright": "#3a3939",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "secondary-container": "#47494d",
+                        "primary-fixed": "#ffdea5",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#e2e2e6",
+                        "on-surface-variant": "#d1c5b4",
+                        "surface-container": "#201f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "section-gap": "128px",
+                        "margin": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "200" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>body {
+    background-color: #050505;
+    color: #e5e2e1
+    }
+.glass-panel {
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(46, 46, 46, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)
+    }
+.luxury-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(154, 143, 128, 0.5);
+    border-radius: 0;
+    color: #e5e2e1;
+    transition: all 0.3s ease
+    }
+.luxury-input:focus {
+    outline: none;
+    border-bottom-color: #e9c176;
+    box-shadow: 0 1px 0 0 #e9c176
+    }
+.luxury-input::placeholder {
+    color: rgba(209, 197, 180, 0.5);
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase
+    }
+.bg-cinematic {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA1okh9gxt7PcS00LwUm7EJaNy1Gv8cinbTnlk5O85pumNgBKgkXST3qGwudaxU2kO-009V3hLvKGMcr_3RNOarTzViKPhSdclMN21Mm6widGkcf3WW4yzo4aukst8M5b3wON2W34Ltai3F35WheTB3mQeNtRc8DQui_7sMjykHHW4Vc0QFciAEN9cl7rB6LaCxYKj1HEEwS0fJURomGvmcQVi4XTb0A_vgKJm-rSp2zEP2heqjjRtaJlJBQIGcKwqAaGS3S-em56dQ);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+    }
+.overlay-dark {
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.8) 0%, rgba(5, 5, 5, 0.95) 100%)
+    }</style>
+</head>
+<body class="font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<nav class="fixed w-full z-50 bg-black/70 backdrop-blur-xl docked full-width top-0 border-b border-white/10 flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto border-b border-[#2E2E2E]/50 flat with 20px backdrop-blur">
+<div class="text-xl font-light tracking-[0.3em] text-white uppercase">AESTHET</div>
+<div class="hidden md:flex space-x-8 items-center font-manrope tracking-[0.2em] text-[10px] uppercase font-medium">
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Collection</a>
+<a class="text-white font-semibold" href="#">Atelier</a>
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Archive</a>
+<a class="text-white/60 hover:text-white transition-opacity duration-300" href="#">Journal</a>
+</div>
+<div>
+<a class="font-label-sm text-label-sm text-[#C5A059] border border-[#C5A059] px-6 py-2 hover:bg-[#C5A059]/10 transition-colors duration-300" href="#">Inquire</a>
+</div>
+</nav>
+<!-- Main Content Area with Cinematic Background -->
+<main class="flex-grow flex items-center justify-center relative bg-cinematic" data-alt="Dark, moody atmospheric background with subtle swirling smoke textures and deep black tones, cinematic lighting">
+<div class="absolute inset-0 overlay-dark"></div>
+<!-- Centered Floating Panel -->
+<div class="relative z-10 w-full max-w-2xl mx-gutter my-section-gap glass-panel p-12 md:p-16 rounded-DEFAULT flex flex-col items-center">
+<div class="text-center mb-12">
+<span class="font-label-sm text-label-sm text-primary-container mb-4 block">KAIROS</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-2 tracking-[0.15em] font-light">Create Your Experience</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Define the parameters of your exclusive event.</p>
+</div>
+<form class="w-full space-y-8">
+<!-- Input Group -->
+<div class="relative group">
+<input class="luxury-input w-full py-3 px-0 font-body-md text-body-md" id="eventName" placeholder="Event Nomenclature" required="" type="text"/>
+<label class="sr-only" for="eventName">Event Nomenclature</label>
+</div>
+<!-- Input Group Two Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group">
+<input class="luxury-input w-full py-3 px-0 font-body-md text-body-md" id="eventDate" required="" type="date"/>
+<label class="sr-only" for="eventDate">Date of Inception</label>
+</div>
+<div class="relative group">
+<input class="luxury-input w-full py-3 px-0 font-body-md text-body-md" id="eventTime" required="" type="time"/>
+<label class="sr-only" for="eventTime">Hour of Commencement</label>
+</div>
+</div>
+<!-- Input Group -->
+<div class="relative group">
+<input class="luxury-input w-full py-3 px-0 font-body-md text-body-md" id="eventLocation" placeholder="Coordinates / Locale" required="" type="text"/>
+<label class="sr-only" for="eventLocation">Coordinates / Locale</label>
+</div>
+<!-- Input Group -->
+<div class="relative group">
+<input class="luxury-input w-full py-3 px-0 font-body-md text-body-md" id="guestCount" max="50" min="1" placeholder="Select Guest Configuration (Max 50)" type="number"/>
+<label class="sr-only" for="guestCount">Guest Configuration</label>
+</div>
+<!-- Textarea Group -->
+<div class="relative group mt-12">
+<textarea class="luxury-input w-full py-3 px-0 font-body-md text-body-md resize-none" id="eventDetails" placeholder="Specific Requirements &amp; Ambience Preferences" rows="3"></textarea>
+<label class="sr-only" for="eventDetails">Specific Requirements</label>
+</div>
+<!-- CTA Button -->
+<div class="mt-16 flex justify-center w-full pt-8">
+<button class="w-full md:w-auto px-12 py-4 border border-primary text-primary font-label-sm text-label-sm hover:bg-primary/10 transition-all duration-300 tracking-[0.2em] uppercase flex items-center justify-center gap-3" type="submit">
+<span>Initialize Event</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#050505] full-width py-16 border-t border-[#2E2E2E]/30 tonal shift with subtle top border no shadows, flat canvas flex flex-col md:flex-row justify-between items-center px-12 max-w-[1440px] mx-auto z-20 relative">
+<div class="text-lg font-light tracking-widest text-white uppercase mb-8 md:mb-0">AESTHET</div>
+<div class="font-manrope text-[9px] tracking-widest uppercase text-white/40 mb-8 md:mb-0">
+            © 2024 AESTHET. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex space-x-8 font-manrope text-[9px] tracking-widest uppercase">
+<a class="text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Terms</a>
+<a class="text-white/40 hover:text-[#C5A059] transition-colors duration-300" href="#">Legal</a>
+</div>
+</footer>
+</body></html>
