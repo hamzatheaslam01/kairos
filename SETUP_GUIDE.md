@@ -13,6 +13,26 @@
 
 ---
 
+## 🔒 Security Notice
+
+This repository is intended for educational and development purposes.
+
+Never commit the following publicly:
+- `.env` files
+- API keys
+- Database credentials
+- JWT secrets
+- Production access tokens
+- Cloud credentials
+
+Before deploying to production:
+- Rotate all secrets
+- Use strong randomly generated credentials
+- Enable HTTPS
+- Configure proper CORS restrictions
+- Enable database authentication
+- Use environment-specific configuration files
+
 ## 🎯 Overview
 
 KAIROS is an AI-powered event planning platform that helps users plan events (weddings, corporate events, birthdays) by recommending venues, caterers, and decorators based on their requirements.
@@ -129,21 +149,17 @@ PORT=5001
 NODE_ENV=development
 
 # MongoDB Configuration
-# Option 1: MongoDB Atlas (Cloud)
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/kairos?retryWrites=true&w=majority
+MONGODB_URI=YOUR_MONGODB_CONNECTION_STRING
 
-# Option 2: Local MongoDB
-# MONGODB_URI=mongodb://localhost:27017/kairos
-
-# JWT Secret (Change this to a random string)
-JWT_SECRET=your_super_secret_jwt_key_change_this_in_production_12345
+# JWT Secret
+JWT_SECRET=GENERATE_A_RANDOM_SECRET_BEFORE_DEPLOYMENT
 
 # Groq AI Configuration
-GROQ_API_KEY=your_groq_api_key_here
+GROQ_API_KEY=PASTE_YOUR_GROQ_API_KEY_HERE
 GROQ_PRIMARY_MODEL=llama-3.3-70b-versatile
 GROQ_FALLBACK_MODEL=llama-3.1-8b-instant
 
-# Redis Configuration (Optional - for caching)
+# Redis Configuration (Optional)
 # REDIS_URL=redis://localhost:6379
 # REDIS_PASSWORD=
 # REDIS_ENABLED=false
@@ -342,13 +358,10 @@ NODE_ENV=production npm start
 
 ## 👥 Demo Accounts
 
-After seeding the database, you can login with these accounts:
+Sample accounts are generated locally during database seeding.
 
-| Role | Email | Password | Description |
-|------|-------|----------|-------------|
-| **Admin** | admin@kairos.com | admin123 | Full system access, view all bookings |
-| **User** | demo@kairos.com | demo123 | Regular user account |
-| **User** | fatima@kairos.com | fatima123 | Regular user account |
+For security reasons, default credentials are not documented publicly.
+Create your own local test accounts after setup.
 
 ---
 
@@ -368,7 +381,7 @@ curl -X POST http://localhost:5001/api/auth/register \
 # Login
 curl -X POST http://localhost:5001/api/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"demo@kairos.com","password":"demo123"}'
+  -d '{"email":"your_test_account@example.com","password":"your_password"}'
 ```
 
 ### Test Frontend
@@ -479,7 +492,7 @@ NODE_ENV=production
 PORT=5001
 
 # Use production MongoDB (Atlas recommended)
-MONGODB_URI=mongodb+srv://prod_user:prod_pass@cluster.mongodb.net/kairos_prod
+MONGODB_URI=YOUR_PRODUCTION_DATABASE_URI
 
 # Strong JWT secret
 JWT_SECRET=<generate-strong-random-secret>
@@ -615,7 +628,7 @@ If you encounter issues:
 - [ ] Backend running (`cd server && npm run dev`)
 - [ ] Frontend running (`cd client && npm run dev`)
 - [ ] Accessed http://localhost:5173
-- [ ] Logged in with demo account
+- [ ] Logged in with a locally created test account
 
 ---
 
